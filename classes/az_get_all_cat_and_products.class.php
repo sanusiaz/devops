@@ -829,7 +829,7 @@
 		 * @return [type] [call back function]
 		 */
 		protected function switch_order_type() {
-			// SWITCH BTW ORDER TYPE
+			// SWITCH BETWEEN ORDER TYPE
 			switch ($this->orderType) {
 				case "Title":
 					if ( preg_match("/^[a-zA-Z0-9]+$/", $this->orderType) &&  preg_match("/^[a-zA-Z0-9, ]+$/", $this->products_title) ) {
@@ -837,6 +837,7 @@
 					}
 				break;
 				case "Categories":
+					// select products from categories
 					if ( preg_match("/^[a-zA-Z0-9]+$/", $this->orderType) ) {
 					 	$this->Get_products_from_categories();
 					}
@@ -847,6 +848,7 @@
 					}
 				break;
 				case  "Mostviewedproducts":
+					// select most viewed products
 					if ( preg_match("/^[a-zA-Z0-9]+$/", $this->orderType) ) {
 						 $this->Get_top_viewed_products();
 					}
