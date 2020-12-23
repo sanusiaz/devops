@@ -1,3 +1,6 @@
+/*
+* RELOAD CAPTCH ANYTIME THIS FUNCTION IS CALLED
+*/
 function Reload_Captch_text() {
 	$.ajax({
         url: 'http://localhost/lumiere/captch_restall.php',
