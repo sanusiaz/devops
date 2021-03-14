@@ -8,9 +8,9 @@
 		public $error_messages;			// error messages
 
 		public function __construct($conn) {
-			$this->conn = $conn;
-			$this->output_messages = $output_messages = "";
-			$this->error_messages = $error_messages = "";
+			$this->conn 			= $conn;
+			$this->output_messages 	= $output_messages = "";
+			$this->error_messages 	= $error_messages = "";
 		}
 
 		protected function get_random_products() {
@@ -68,6 +68,7 @@
 										return true;
 									}
 									else {
+										// no products found
 										$this->all_error_messages = "No Products Found";
 									}
 								}
