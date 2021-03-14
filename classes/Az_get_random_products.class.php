@@ -1,9 +1,11 @@
 <?php 
-	
+	/**
+	* THIS CLASS FILE SELECTS RANDOM PRODUCTS FROM STORE
+	**/
 	class Az_get_random_products {
-		protected $conn;
-		protected $output_messages;
-		public $error_messages;
+		protected $conn;				// connection
+		protected $output_messages;		// output messages
+		public $error_messages;			// error messages
 
 		public function __construct($conn) {
 			$this->conn = $conn;
@@ -78,7 +80,10 @@
 				}
 			}
 		}
-
+		
+		/**
+		* SHOW ALL RANDOM PRODUCTS FROM OUTPUT MESSAGES RESULTS
+		**/
 		public function show_all_rnd_products() {
 			if ( $this->get_random_products() === true ) {
 				if ( is_array($this->output_messages) && ( count($this->output_messages)  > 0) ) {
